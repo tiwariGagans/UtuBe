@@ -75,7 +75,7 @@ function Navbar() {
           className="text-xl cursor-pointer"
           onClick={handleSidebar}
         />
-        <img src={logo} alt="youTube logo" className="w-28 cursor-pointer" />
+        <a href="http://localhost:5173/"> <img src={logo} alt="youTube logo" className="w-28 cursor-pointer" /> </a>
       </div>
       <div className="hidden md:flex w-[35%] items-center ">
         <div className="w-[100%] px-4 py-2 border-[1px] border-gray-400 rounded-l-full">
@@ -89,23 +89,23 @@ function Navbar() {
           />
         </div>
         <button
-          className="px-4 py-2 border-[1px] border-gray-400 bg-gray-100 rounded-r-full"
+          className="px-4 py-2 border-[1px]  hover:bg-gray-400 duration-300 border-gray-400 bg-gray-100 rounded-r-full"
           onClick={() => searchQueryHandler("searchButton")}
         >
           <CiSearch size={"24px"} />
         </button>
         <IoMdMic
           size={"42px"}
-          className="ml-3 border border-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-200 duration-200"
+          className="ml-3 border  border-gray-600 rounded-full p-2 cursor-pointer hover:bg-gray-200 duration-200"
         />
       </div>
-      <div className="flex space-x-5 items-center ">
+      <div className="flex space-x-5 items-center  ">
         <IoIosSearch
-          className="text-2xl md:hidden"
+          className="text-2xl md:hidden "
           onClick={() => setSearchbar(!searchbar)}
         />
-        <RiVideoAddLine className="text-2xl" />
-        <AiOutlineBell className="text-2xl" />
+        <RiVideoAddLine className="text-2xl    cursor-pointer hover:bg-gray-500 duration-200 rounded-full" />
+        <AiOutlineBell className="text-2xl    cursor-pointer hover:bg-gray-500 duration-200 rounded-full" />
         <Avatar src={profile} size="32" round={true} />
       </div>
     </div>
